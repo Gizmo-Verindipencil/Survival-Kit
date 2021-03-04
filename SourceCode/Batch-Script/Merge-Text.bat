@@ -1,0 +1,1 @@
+copy *.txt _merged.txt
