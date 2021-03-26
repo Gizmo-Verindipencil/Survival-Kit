@@ -15,7 +15,7 @@ Public Function usrMakeInsertSQLHead(table As String, ParamArray ranges() As Var
             columns = columns & c.Value
         Next c
     Next r
-    usrSqlInsertColumns = "insert into " & table & "(" & columns & ")"
+    usrMakeInsertSQLHead = "insert into " & table & "(" & columns & ")"
 End Function
 
 ' @summary INSERT•¶‚Ì“o˜^“à—e‚ğw’è‚·‚é•”•ª‚ğì¬‚µ‚Ü‚·
@@ -30,5 +30,5 @@ Public Function usrMakeInsertSQLBody(ParamArray ranges() As Variant)
             values = values & IIf(LCase(c.Value) = "null", "null", "'" & c.Value & "'")
         Next c
     Next r
-    usrSqlInsertValues = "values(" & values & ");"
+    usrMakeInsertSQLBody = "values(" & values & ");"
 End Function
